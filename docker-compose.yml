@@ -1,0 +1,25 @@
+name: xtrimchat
+
+networks:
+  default:
+    name: xtrimchat-nw
+    external: true
+
+services:
+  tesseract-runner:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tesseract-runner
+    restart: unless-stopped
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+      - ./temp_images:/app/temp_images
+    working_dir: /app
+    healthcheck:
+      test: ["CMD", "tesseract", "--version"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+   

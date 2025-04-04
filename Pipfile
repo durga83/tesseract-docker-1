@@ -1,0 +1,14 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+pymupdf = "==1.25.5"  # Instead of pdf2image
+pathlib = "==1.0.1"  # For better path handling
+pdf2image = "==1.17.0"
+
+[dev-packages]
+
+[requires]
+python_version = "3.11"
