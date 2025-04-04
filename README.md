@@ -1,3 +1,18 @@
+This Python program is a multi-format OCR processor designed to extract and clean text from .pdf, .docx, and image files (.png, .jpg, .jpeg) using Tesseract OCR running inside a Docker container.
+
+# Steps To Run
+
+```bash
+ git clone https://github.com/durga83/tesseract-docker-1.git
+ cd tesseract-docker-1
+ pipenv shell
+ pipenv install
+ python run_ocr.py 
+ # run_ocr.py script is a OCR processor which extract and clean text from .pdf, .docx, and image files (.png, .jpg, .jpeg) using Tesseract OCR running inside a Docker container.
+
+ # Check the output/ folder for .txt files.
+```
+
 # Guide to Creating a Dockerized Tesseract OCR Project
 
 ## Create a Project Directory
